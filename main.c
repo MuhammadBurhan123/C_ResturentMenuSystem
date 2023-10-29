@@ -18,7 +18,6 @@ int main() {
 
     do {
         printf("Choose an item that you want to order.\n 1 - Fish Biryani => Rs.%d\n 2 - Chicken Biryani => Rs.%d\n 3 - Sindhi Biryani => Rs.%d\n 4 - Lahori Biryani => Rs.%d\n 5 - Tikka Biryani => Rs.%d\n 6 - Place Order \n 0 - Exit \n\n", fishBiryaniPrice, chickenBiryaniPrice, sindhiBiryaniPrice, lahoriBiryaniPrice, tikkaBiryaniPrice);
-
         scanf("%d", &selectedItem);
 
         if (selectedItem >= 1 && selectedItem <= 5) {
@@ -56,7 +55,10 @@ int main() {
 
         } else if (selectedItem == 6) {
             exit = 1;
-            printf("Placing Order. Exiting the program. Goodbye!\n");
+            printf("Placing Order. Exiting the program. Goodbye!\n\n");
+        } else if (selectedItem == 0){
+            exit = 1;
+            printf("Exiting the program. Goodbye!\n\n");
             break;
         } else {
             printf("Invalid selection. Please choose a number between 1 and 6.\n");
